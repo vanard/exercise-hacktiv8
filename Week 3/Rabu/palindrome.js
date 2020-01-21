@@ -1,6 +1,12 @@
 function palindrome(kata) {
     // you can only write your code here!
-    const kataDibalik = kata.split("").reverse().join("");
+    let kataDibalik = "";
+    // kataDibalik = kata.split("").reverse().join("");
+    for (let i = kata.length-1; i >= 0; i--) {
+        kataDibalik += kata[i];
+        
+    }
+
     if (kataDibalik === kata) {
         return true;
     }else

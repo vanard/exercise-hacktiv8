@@ -1,20 +1,32 @@
 function urutkanAbjad(str) {
     // you can only write your code here!
-    const abjad = ['a','b','c','d', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-    const abjadIndex = [];
-    for (let i = 0; i < str.length; i++) {
-        abjadIndex.push(abjad.indexOf(str[i]));
-        
-    }
-    abjadIndex.sort(function(a, b){return a-b});
+    const data = [];
+    const lowest = {};
+    const 
+    for (let i = 0; i < str.length-1; i++) {
 
-    const res = [];
-    for (let i = 0; i < abjadIndex.length; i++) {
-         res.push(abjad[abjadIndex[i]]);
+        for (let index = 0; index < array.length; index++) {
+            const element = array[index];
+            
+        }
+        data.push(str[i]);
+        if (lowest.value != null && lowest.value > str[i]) {
+            lowest.value = str[i];
+            lowest.pos = i;
+        }
+        else if (str[i] > str[i+1]) {
+            lowest.value = str[i+1];
+            lowest.pos = i+1;
+        } else {
+            lowest.value = str[i];
+            lowest.pos = i;
+        }
         
     }
-    return res.join('');
+
+    return lowest.value;
   }
+  
   
   // TEST CASES
   console.log(urutkanAbjad('hello')); // 'ehllo'

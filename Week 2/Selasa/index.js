@@ -1,6 +1,6 @@
 // if-else
 function proxytia(name, role) {
-    let game = "";
+    // let game = "";
     if (name.length < 1)
         return "Name must be fill."
     

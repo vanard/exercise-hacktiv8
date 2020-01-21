@@ -1,6 +1,17 @@
 function balikKata(kata) {
     // you can only write your code here!
-    return kata.split("").reverse().join("");
+    // return kata.split("").reverse().join("");
+
+    let balik = "";
+    // for (let i = 0; i < kata.length; i++) {
+    //   balik += kata[(kata.length-1)-i];
+    // }
+
+    for (let i = kata.length-1; i >= 0; i--) {
+      balik += kata[i];
+    }
+
+    return balik;
   }
   
   // TEST CASES
