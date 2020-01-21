@@ -4,7 +4,7 @@ function pasanganTerbesar(num) {
     let terbesar = 0;
     for (let i = 0; i < number.length-1; i++) {    
         var pasangan = number[i]+number[i+1];
-        if (terbesar < parseInt(pasangan)) {
+        if (terbesar < Number(pasangan)) {
             terbesar = pasangan;
         }
         

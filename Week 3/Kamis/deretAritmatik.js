@@ -6,11 +6,19 @@ function tentukanDeretAritmatika(arr) {
         dif.push(arr[i+1]-arr[i]); 
     }
 
-    dif.forEach(it => {
-        if (it !== dif[0]) {
+    // dif.forEach(it => {
+    //     if (it !== dif[0]) {
+    //         judge = false;
+    //     }
+    // });
+
+    for (let i = 0; i < dif.length; i++) {
+        if (dif[0] !== dif[i]) {
             judge = false;
+            break;
         }
-    });
+        
+    }
 
     return judge;
   }

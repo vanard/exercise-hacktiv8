@@ -1,23 +1,26 @@
 function angkaPalindrome(num) {
     // you can only write your code here!
-    let palindrome = true;
     if (num.toString().length === 1 && num < 9) {
         return num+1;
     }else {
-        while (palindrome) {
-            palindrome = false;
-            if ((num.toString().length%2) === 0) {
-                console.log(11);
-                console.log(1001);
-                return "Jumlah Genap";
-            }else{
-                console.log(121);
-                console.log(181);
-                return "Jumlah Ganjil";
-            }
+        while(reverse(num) != num) {
+            num++;
         }
+
+        return num;
         
     }
+  }
+
+  function reverse(str) {
+      let stonk = ""+str;
+      let word = "";
+    for (let i = stonk.length-1; i >= 0; i--) {
+        word += stonk[i];
+        
+    }
+
+    return word;
   }
   
   // TEST CASES

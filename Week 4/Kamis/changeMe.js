@@ -1,6 +1,7 @@
 function changeMe(arr) {
   // you can only write your code here!
   const today = new Date().getFullYear();
+  console.log(today);
   let res = {};
   let age = 0;
   

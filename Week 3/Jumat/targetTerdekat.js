@@ -12,15 +12,25 @@ function targetTerdekat(arr) {
     }
 
     let dif;
-    posTarget.forEach(it => {
-        const calculate = Math.abs(it - posChar);
+    // posTarget.forEach(it => {
+    //     const calculate = Math.abs(it - posChar);
+    //     if (dif != null) {
+    //         if (dif > calculate) {
+    //             dif = calculate;
+    //         }
+    //     }else
+    //         dif = calculate;
+    // });
+
+    for (let i = 0; i < posTarget.length; i++) {
+        const calculate = Math.abs(posTarget[i] - posChar);
         if (dif != null) {
             if (dif > calculate) {
                 dif = calculate;
             }
         }else
             dif = calculate;
-    });
+    }
 
     if (dif != null) {
         return dif;        

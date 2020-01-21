@@ -1,9 +1,14 @@
 function cariMean(arr) {
     // you can only write your code here!
     let mean = 0;
-    arr.forEach(it => {
-        mean+=it;
-    });
+    // arr.forEach(it => {
+    //     mean+=it;
+    // });
+
+    for (let i = 0; i < arr.length; i++) {
+        mean += arr[i];
+        
+    }
 
     return Math.round(mean/arr.length);
   }

@@ -1,32 +1,47 @@
 function urutkanAbjad(str) {
     // you can only write your code here!
-    const data = [];
-    const lowest = {};
-    const 
-    for (let i = 0; i < str.length-1; i++) {
-
-        for (let index = 0; index < array.length; index++) {
-            const element = array[index];
-            
-        }
-        data.push(str[i]);
-        if (lowest.value != null && lowest.value > str[i]) {
-            lowest.value = str[i];
-            lowest.pos = i;
-        }
-        else if (str[i] > str[i+1]) {
-            lowest.value = str[i+1];
-            lowest.pos = i+1;
-        } else {
-            lowest.value = str[i];
-            lowest.pos = i;
-        }
+    let temp = [];
+    for (let i = 0; i < str.length; i++) {
+        temp.push(str[i]);
         
     }
 
-    return lowest.value;
+    temp = selSort(temp);
+    let result = "";
+
+    for (let i = 0; i < temp.length; i++) {
+        result += temp[i];
+        
+    }
+    return result;
   }
   
+  function selSort(items) {
+    let len = items.length, min;
+
+    for (i=0; i < len; i++){
+
+        min = i;
+
+        for (j=i+1; j < len; j++){
+            if (items[j] < items[min]){
+                min = j;
+            }
+        }
+
+        if (i != min){
+            swap(items, i, min);
+        }
+    }
+
+    return items;
+}
+
+function swap(items, firstIndex, secondIndex){
+    let temp = items[firstIndex];
+    items[firstIndex] = items[secondIndex];
+    items[secondIndex] = temp;
+}
   
   // TEST CASES
   console.log(urutkanAbjad('hello')); // 'ehllo'
