@@ -3,6 +3,7 @@
 * Convert time to words
 * Function timeToWords menerima input berupa string yang merupakan sebuah waktu. 
 * Function ini berfungsi merubah waktu menjadi sebuah kalimat.
+* Waktu yang ditampilkan adalah waktu 24 jam.
 *
 * EXAMPLE 1 ------------------------
 * Input: 
@@ -50,7 +51,10 @@ function timeToWords(waktu) {
     time.hour = hour;
     time.minute = minute;
 
-    if (Number(time.minute) > 30) {
+    if (Number(time.hour) === 0 && Number(time.minute) < 30) {
+        res = "Jam 12 lebih " + Number(time.minute) + " menit";
+    }
+    else if (Number(time.minute) > 30) {
         res = "Jam " + (Number(time.hour) + 1) + " kurang " + (60 - Number(time.minute) + " menit");
     }else if (Number(time.minute) === 30) {
         res = "Jam setengah " + (Number(time.hour) + 1);
@@ -64,6 +68,6 @@ function timeToWords(waktu) {
 }
 
 console.log(timeToWords('10:10')); // Jam 10 lebih 10 menit
-console.log(timeToWords('01:30')); // Jam setengah 2
+console.log(timeToWords('00:10')); // Jam setengah 2
 console.log(timeToWords('09:47')); // Jam 10 kurang 13 menit
 console.log(timeToWords('11:00')); // Jam 11
