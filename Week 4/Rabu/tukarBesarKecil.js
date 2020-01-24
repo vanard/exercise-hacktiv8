@@ -1,18 +1,18 @@
 function tukarBesarKecil(kalimat) {
     // you can only write your code here!
-    let change = [];
+    let change = "";
     for (let i = 0; i < kalimat.length; i++) {
         if (kalimat[i] === kalimat[i].toUpperCase() && kalimat[i] !== ' ') {
-            change.push(kalimat[i].toLowerCase());
+            change += kalimat[i].toLowerCase();
         } else if (kalimat[i] === kalimat[i].toLowerCase() && kalimat[i] !== ' ') {
-            change.push(kalimat[i].toUpperCase());
+            change += kalimat[i].toUpperCase();
         } else {
-            change.push(' ');
+            change += (' ');
         }
         
     }
 
-    return change.join('');
+    return change;
   }
   
   // TEST CASES
