@@ -29,9 +29,10 @@ console.log(kabisatYear(1996))
 /* pseudocode
     algoritm Tahun Kabisat
     READ numberOfYear
-    IF numberOfYear habis dibagi 4 dan tidak habis dibagi 100, atau 
+    SET DEFAULT result False
+    IF numberOfYear habis dibagi 4 dan tidak habis dibagi 100, OR 
     numberOfYear habis dibagi 4 dan habis dibagi 100 dan habis dibagi 400
-    THEN SAVE true
+    THEN SET result TO true
     SHOW result
 */
 
@@ -43,10 +44,10 @@ function laundry(clothes) {
 /* pseudocode
     algoritm Laundry Day
     READ and SAVE clothes
-    FOR tiap cucian yang akan dimasukkan
+    FOR EACH cucian yang akan dimasukkan
     INCREMENT cucian
     END FOR
-    IF cucian sama dengan jumlah cucian yang masuk THEN
+    IF cucian equals to jumlah cucian yang masuk THEN
     SHOW mesin cuci menyala
     ELSE
     SHOW mesin masih belum menyala
@@ -61,7 +62,7 @@ function checkNails() {
 
 /* pseudocode
     algoritm Periksa KUKU
-    FOR tiap siswa didalam kelas
+    FOR each siswa didalam kelas
     IF siswa memiliki kuku panjang
     THEN SHOW Guru akan menghukum siswa
     ELSE Show Guru akan memuji siswa
